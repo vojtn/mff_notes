@@ -1,3 +1,6 @@
+[Back to overview](/Readme.md)
+
+
 # Write once, Run everywhere
 
 A development approach where **the same codebase** can be deployed to **multiple platforms** (web, desktop, mobile, etc.).
@@ -96,3 +99,6 @@ Provides a translation layer between your app code and the native system (OS-lev
 - Does **not** have direct access to the DOM (but can communicate with JavaScript).
 - Used for performance-critical web apps (e.g., image/video processing, games).
 - Enables **porting desktop apps to the web**.
+
+---
+[Back to overview](/Readme.md)
