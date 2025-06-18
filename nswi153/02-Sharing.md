@@ -37,7 +37,7 @@
 
 No strict standard for MVC — implementations vary widely.
 
-![](/img/MVC.png)
+![](img/MVC.png)
 --- 
 
 ## MVP
@@ -50,7 +50,7 @@ No strict standard for MVC — implementations vary widely.
 
 Presenter often stores **state** and pushes updates to the view.
 
-![](/img/MVP.png)
+![](img/MVP.png)
 ---
 
 ## MVVM (Model-View-ViewModel)
@@ -69,7 +69,7 @@ Presenter often stores **state** and pushes updates to the view.
 - **Two-way binding** keeps UI and state in sync.
 - **Reduces boilerplate** and manual DOM updates.
 
-![](/img/MVVM.png)
+![](img/MVVM.png)
 
 ---
 
@@ -86,7 +86,7 @@ Presenter often stores **state** and pushes updates to the view.
   - **Coordinator**: Navigation and flow management.
 - Common in complex iOS apps (Swift).
 
-![](/img/MVVMC.png)
+![](img/MVVMC.png)
 ---
 
 ## VIPER
@@ -106,7 +106,7 @@ Presenter often stores **state** and pushes updates to the view.
   - High initial complexity and boilerplate.
   - May be overkill for small projects.
 
-![](/img/VIPER.png)
+![](img/VIPER.png)
 
 ---
 
@@ -126,7 +126,7 @@ Presenter often stores **state** and pushes updates to the view.
 
  "Separate *what* the user sees from *how* they see it."
 
-![](/img/MVT.png)
+![](img/MVT.png)
 
 ---
 
