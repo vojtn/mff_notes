@@ -1,4 +1,4 @@
-[Back to overveiw](/Readme.md)
+[Back to overveiw](Readme.md)
 
 # Agents
 ## Agent
@@ -113,4 +113,4 @@ Agents can be more flexible if they assume goal (desirable states) in addition t
 ![](/img/RepresentationOfStates.png)
 
 
-[Back to overveiw](/Readme.md)
+[Back to overveiw](Readme.md)

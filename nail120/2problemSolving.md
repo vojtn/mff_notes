@@ -1,4 +1,4 @@
-[Back to overveiw](/Readme.md)
+[Back to overveiw](Readme.md)
 
 
 # Problem solving
@@ -126,4 +126,4 @@ Where:
 
 #### monotonous heuristic h(n) -> A* in Graph Search is optimal
 
-[Back to overveiw](/Readme.md)
+[Back to overveiw](Readme.md)

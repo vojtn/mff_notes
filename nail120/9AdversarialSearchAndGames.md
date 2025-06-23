@@ -1,4 +1,4 @@
-[Back to overveiw](/Readme.md)
+[Back to overveiw](Readme.md)
 
 
 # Adversarial search and games
@@ -152,4 +152,4 @@ The **Tragedy of the Commons** describes a situation in which individuals, actin
 ### Solution
 Change the machanism/rules
 
-[Back to overveiw](/Readme.md)
+[Back to overveiw](Readme.md)

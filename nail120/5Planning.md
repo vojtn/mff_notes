@@ -1,5 +1,6 @@
+[Back to overveiw](Readme.md)
+
 # Automated planning
-creates plan of action to achieve agents goals
 Automated planning is concerned with generating a **sequence of actions** (a **plan**) that leads from an initial state to a goal state, given a model of the environment.
 
 ## Planning domain
@@ -117,3 +118,5 @@ Decomposing tasks to subtasks until primitive asks are obtained
 - **Decompose** high-level tasks into **subtasks**
 - Continue decomposing until **primitive actions** are reached
 - Reflects human-like planning strategies
+
+[Back to overveiw](Readme.md)
