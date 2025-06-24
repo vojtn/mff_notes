@@ -1,3 +1,5 @@
+[Back to overveiw](Readme.md)
+
 # Probabilistic reasoning
 
 ## Core notions
@@ -126,3 +128,6 @@ Formula:
 | Variable Elimination     | Efficient inference using factor manipulation                              |
 | Rejection Sampling       | Keep only samples consistent with evidence                                  |
 | Likelihood Weighting     | Use weights for evidence-consistent samples                                |
+
+
+[Back to overveiw](Readme.md)
