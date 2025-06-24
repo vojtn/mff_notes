@@ -1,11 +1,12 @@
 | Overview |
 |---|
-| [Agents](1agents.md) |
-| [Problem solving](2problemSolving.md) |
-| [CSP](3constraintSatisfaction.md) |
-| [Knowledge representation](4knowledgeRepresentation.md) |
-| [Planning](5Planning.md) |
-| [Probabilistic reasoning](6probabilisticReasoning.md) |
-| [Reasoning over time](7reasoningOverTime.md) |
-| [Adversial search and games](8AdversarialSearchAndGames.md) |
-| [Machine learning](9machineLearning.md) |
+| [Agents](01agents.md) |
+| [Problem solving](02problemSolving.md) |
+| [CSP](03constraintSatisfaction.md) |
+| [Knowledge representation](04knowledgeRepresentation.md) |
+| [Planning](05Planning.md) |
+| [Probabilistic reasoning](06probabilisticReasoning.md) |
+| [Reasoning over time](07reasoningOverTime.md) |
+| [DecisionMaking](08DecisionMaking.md) |
+| [Adversial search and games](09AdversarialSearchAndGames.md) |
+| [Machine learning](10machineLearning.md) |

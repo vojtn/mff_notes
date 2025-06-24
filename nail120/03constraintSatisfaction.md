@@ -52,11 +52,6 @@ An arc (X → Y) is **arc consistent** if:
 A CSP is **arc consistent** if every arc in both directions is arc consistent.
 
 
-CSP is arc consistent iff every arc (Vi
-,Vj
-) is arc consistent (in both
-directions).
-
 ## K-Consistency
 
 A CSP is **k-consistent** if:
