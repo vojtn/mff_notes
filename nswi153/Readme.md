@@ -1,6 +1,6 @@
-## Notes from advaced web programming (nswi153)
+## Notes from Advaced web programming (NSWI153)
 
-|Overview|
+| Overview |
 |---|
 | 2. [Sharing is caring](02-Sharing.md) |
 | 3. [JS](03-Javascript.md) |
@@ -12,3 +12,10 @@
 | 10. [Server](10-Server.md) |
 | 11. [WriteOnce](11-WriteOnce.md) |
 | 12. [Decentralization](7-Decentralization.md) |
+
+
+---
+
+[Back to main page](/README.md)
+
+---

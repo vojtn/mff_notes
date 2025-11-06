@@ -7,3 +7,9 @@ Vypracované [okruhy](https://raw.githubusercontent.com/jbulin-mff-uk/nail062/ma
 | [Pojmy](/nail062/Pojmy.pdf) |
 | [Lehké věty](/nail062/Lehké%20věty.pdf) |
 | [Těžké věty](/nail062/Těžké%20věty.pdf) |
+
+---
+
+[Back to main page](/README.md)
+
+---
