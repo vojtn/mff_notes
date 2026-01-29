@@ -209,6 +209,22 @@ role = "frontend"
 [servers.beta]
 ip = "10.0.0.2"
 role = "backend"
+
+#structure in JSON:
+{
+    "servers": {
+        "alpha": {
+            "ip": "10.0.0.1",
+            "role": "frontend"
+        },
+        "beta": {
+            "ip": "10.0.0.2",
+            "role": "frontend"
+        }
+    }
+}
+
+
 ```
 
 ### Array of tables
