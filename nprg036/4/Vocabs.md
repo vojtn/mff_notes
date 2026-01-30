@@ -4,6 +4,7 @@ describes what IRI means and what are defined
 Catalog of vocabularies used on the Web of Data
 -> Basic rule - vocabulary reuse
 
+RDF Vocabulary = collection of classes and properties, their IRIs and their definitions
 
 # Dublin core (dcterms)
 Standardization of naming organization.
