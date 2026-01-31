@@ -1,11 +1,12 @@
 # Data
-Necessity of correct data reprezentation and following specifications
+Necessity of correct data representation and following specifications
 - Data should be app-independent -> apps do operations on top of the data
 - multiple app may need to share
 
 
 ## Conceptual domain model
 What is the data about
+
 Conceptual model -> logical model -> physical level
 - independent of any representation or technology
 - can be discussed with non-IT people
@@ -13,7 +14,7 @@ Conceptual model -> logical model -> physical level
 Consists of:
 - Class
 - Attribute
-- Assocication
+- Association
 
 ## Data models
 Logical view of the data - how is data structured using given technology/format
@@ -63,15 +64,18 @@ Annotations and constraints applicable to instances of data formats, allowing th
 
 ### Specific data formats
 metaformats = CSV, XML, JSON = hosts formats for use-case specific format
+
 JSON
 - GeoJSON
 CSV
 - GTFS
+
 XML
 - SVG
 - Atom
 - RSS
 - Office Open XML
+
 RDF
 - DCAT
 
@@ -88,7 +92,7 @@ Specification available on the Web, freely accessible to anyone, with no limitat
 - need for registration
 - need for certification of library/application claiming compatibility
 
-railML.org
+e.g. railML.org
 - XML based
 - need for certification
 
@@ -97,13 +101,13 @@ railML.org
 - Depends on the form of a particular data instance
 Says whether the data is *easily processed* by appropriate applications
 
-#### Binary
+#### Binary formats
 - their structure may be defined on bit by bit level
 - a.k.a. “non-text” file
 - Not readable by text editors
 - Viewable by hex editors
 
-#### Text-based
+#### Text-based formats
 - Contains text
 - Typically structured as characters on lines
 - Viewable by text editors
@@ -116,15 +120,15 @@ Character encoding - representation of characters as binary sequences (numbers)
 US-ASCII using 7 bits to represent 1 character
 
 ###### New line representation
-CR - carriage return - \r
-LF - line feed - \n - Unix/Linux, MacOS
-CR LF - both of them - \r\n - Windows
+- CR - carriage return - \r
+- LF - line feed - \n - Unix/Linux, MacOS
+- CR LF - both of them - \r\n - Windows
 
 ###### UTF-8
-1 to 4 bytes representing one character
-first byte compatible with US-ASCII
-most frequently used characters use 2 bytes
-emojis use 4 bytes
+- 1 to 4 bytes representing one character
+- first byte compatible with US-ASCII
+- most frequently used characters use 2 bytes
+- emojis use 4 bytes
 
 
 ###### BOM (Byte order mark)
@@ -145,9 +149,6 @@ Most data formats use UTF-8 without BOM, cause other variants are rarely used on
 From Czech legacy systems
 1. iso-8859-2 (Latin 2)
 2. windows-1250
-
-## Data schemas
-Annotations and constraints applicable to instances of data formats, allowing the data to be better described and validated
 
 
 ## Standardization
@@ -262,6 +263,18 @@ Percent-encoding
 - each byte represented as '%' and two hexadecimal digits e.g. 💩 => %F0%9F%92%A9
 
 example: https://opendata.gov.cz/špatná-praxe:start
+
+### Punycode
+Special encoding used to convert Unicode characters to ASCII, which is a smaller, restricted character set.
+- used to encode internationalized domain names (IDN).
+- RFC 3492 
+IRIs not to be confused with IDN - internationalized domain name:
+
+```
+https://www.háčkyčárky.cz = https://www.xn--hkyrky-ptac70bc.cz/
+```
+- even less readable than percent-encoding
+- punycoded name is used with DNS
 
 
 ## Data types
