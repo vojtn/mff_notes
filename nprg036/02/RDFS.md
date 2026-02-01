@@ -2,14 +2,16 @@
 - W3C Recommendation
 - 25 February 2014
 - Vocabulary for creation of other RDF vocabularies
-- RDF Vocabulary = collection of classes and properties, their IRIs and their definitions
 - Functionally different from other schema languages, e.g. XML Schema
 - RDF is “schema-less” - does not restrict the logical schema of the data and any RDF triple can be stored in the triplestore.
 - Some are explained by usage of classes and properties defined by RDFS.
 
+## RDF Vocabulary 
+Collection of classes and properties, their IRIs and their definitions
+
 ## Class
-Class is a resource with its IRI. This resource is of a type rdfs:Class - saying it is a class and can be used as a class for other resources.
-Class also represents a set of all resources of this type.
+Class is a resource with its IRI. This resource is of a type rdfs:Class - saying it is a class and can be used as a class for other resources.  
+Class also represents a set of all resources of this type.  
 rdfs:subClassOf defines a subtype - and also can be viewed as a simple subset with all implications.
 
 Definition of a class:
@@ -54,10 +56,11 @@ rdfs:isDefinedBy - In a sense not specified by RDF
 ## RDF Model
 
 ### rdf:List
-For closed collection
-Normally, RDF triples in the RDF model do not have an order specified, because the RDF model is a set.
-In cases when we need to specify order of resources, we use an rdf:List.
--> RDF representation of the well-known linked list data structure.
+- For closed collection
+
+Normally, RDF triples in the RDF model do not have an order specified, because the RDF model is a set.  
+In cases when we need to specify order of resources, we use an rdf:List.  
+-> RDF representation of the well-known linked list data structure.  
 Note that the list is closed by rdf:nil, i.e. adding to the list requires changing pre-existing data.
 
 In RDF Turtle, there is a syntactic shortcut representing rdf:List “( )” (see later)
@@ -69,10 +72,10 @@ In RDF Turtle, there is a syntactic shortcut representing rdf:List “( )” (se
 :subject :predicate2 () .
 ```
 
-
 ### Open collections
-- not used frequently 
-the collections are open, i.e. one can add to them without changing pre-existing data.
+- not used frequently  
+
+the collections are open, i.e. one can add to them without changing pre-existing data.  
 Uses a set of special predicates from the rdf namespace (_1, _2, …)
 
 #### rdf:Bag
@@ -85,7 +88,7 @@ Sequence - ordering matters - should be interpreted by applications working with
 the items are alternatives - only one should be chosen (e.g. by the user working with an application working with the data).
 
 ## Open World Assumption (OWA)
-open-world assumption is the assumption that the truth value of a statement may be true irrespective of whether or not it is known to be true”
+Assumption that the truth value of a statement may be true irrespective of whether or not it is known to be true
 
 ```
 Statement: "Mary" "is a citizen of" "France"
@@ -94,3 +97,6 @@ Question: Is Paul a citizen of France?
 "Closed world" (for example SQL) answer: No.
 "Open world" answer: Unknown.
 ```
+
+The absence of a statement does not mean the statement is false.
+It simply means we don’t know.

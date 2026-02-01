@@ -27,6 +27,7 @@ This is _very_ important
 This is *very* important
 This is v e r y important
 ```
+
 ## Richtext
 RFC 1341, 1992
 Extremely simple, yet extensible syntax
@@ -36,7 +37,7 @@ Extremely simple, yet extensible syntax
 - balanced formatting commands and negations, with 3 exceptions (<lt>, <nl>(required line break), <np>(page break))
 - Extremely limited capabilities
 - Compatibility with SGML
-US-ASCII encoding, can be explicitly switched
+US-ASCII encoding, can be explicitly switched\
 Media type: text/richtext
 
 ```
@@ -119,7 +120,7 @@ File extension: .602
 
 # Modern text formats for the Web
 
-## HTML (HypText MarkupLanguage)
+## HTML (HyperText Markup Language)
 - HTML, Tim Berners-Lee, CERN, 1991
 - HTML 2.0 IETF RFC 1866, 1995
 - HTML 3.2 W3C Recommendation, 1997
@@ -251,8 +252,11 @@ Original 2004 Markdown 1.0.1 spec ambiguous
 
 ### CommonMark
 Markdown fans, 2014-2021 (v0.30)
+-> improve standardisation
+-> better testability
 - standard, unambiguous syntax specification for Markdown
 - suite of comprehensive tests for implementations
+- set up commond superset of markdown
 
 Implements:
 - Discourse

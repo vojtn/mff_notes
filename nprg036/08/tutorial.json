@@ -1,0 +1,10 @@
+{
+    "city": "Prague",
+    "country": "Czechia",
+    "quaters": [ "Old Town", "New Town", "Smichov" ],
+    "population": 1300000,
+    "mayor": {
+        "name": "Bohuslav Svoboda",
+        "since": 2022
+    }
+}

@@ -192,7 +192,9 @@ collect -turns multiple results into a single list
 April 2024
 Built on openCypher, PGQL, GSQL, and G-CORE languages
 as of 11/2025 - not yet implemented sufficiently
-
+- In ISO GQL: CREATE is INSERT
+- In ISO GQL: Relationships can be also bidirectional
+- standardized query language for property graphs 
 
 # RDF vs LPG
 
@@ -208,9 +210,9 @@ RDF statement itself does not have an identifier - we cannot say anything about 
 -> Reification
 
 ## RDF-star
-part of RDF 1.2 draft
-Allows RDF statements to appear as subjects and objects of other RDF statements.
-The triple in the subject or object position is enclosed in << >> , called “quoted triple”.
+part of RDF 1.2 draft  
+Allows RDF statements to appear as subjects and objects of other RDF statements.  
+The triple in the subject or object position is enclosed in << >> , called “quoted triple”.  
 Quoted triples not necessarily asserted triples, i.e. triples forming the RDF graph.
 Annotation syntax for both asserted and quoted triples.
 
@@ -230,3 +232,14 @@ Annotation syntax for both asserted and quoted triples.
                 {| :claimedBy :employee22 |} .
 ```
  
+### Usage 
+SPARQL-star - SPARQL 1.2
+
+```
+# List all metadata for the given reference to a statement
+SELECT *
+WHERE {
+    <<?man :hasSpouse :woman>> ?p ?o
+    FILTER (?man = :man)
+}
+```

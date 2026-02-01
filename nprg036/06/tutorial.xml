@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="tutorial.xsd">
+    <contract>
+        <uri>https://smlouvy.gov.cz/smlouva/1153037</uri>
+        <publishTime>2017-02-01T00:13:13+01:00</publishTime>
+        <content>
+            
+        </content>
+    </contract>
+    <contract>
+        <uri>https://smlouvy.gov.cz/smlouva/1153341</uri>
+        <publishTime>2017-02-01T07:33:14+01:00</publishTime>
+        <content>
+      
+        </content>
+    </contract>
+</contracts>

@@ -1,3 +1,14 @@
+# Open World Assumption (OWA)
+“open-world assumption is the assumption that the truth value of a statement may be true irrespective of whether or not it is known to be true”
+
+```
+Statement: "Mary" "is a citizen of" "France"
+Question: Is Paul a citizen of France?
+
+"Closed world" (for example SQL) answer: No.
+"Open world" answer: Unknown.
+```
+
 # Linked data
 Regular data are not linked
 issues:
@@ -49,5 +60,13 @@ application of the proven priciples of web of Documents to data
 | | vocabularies – standards for common data representation |
 
 ## Linked Open Data
-Best technical way of representing open data
-- many datasets
+Best technical way of representing open data -> many datasets
+
+1. Open (free to use, reuse, and share)
+2. Published on the Web
+3. Structured using standard formats (RDF)
+4. Interlinked with other datasets using URIs.
+
+examples:
+- DBpedia
+- Wikidata

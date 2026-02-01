@@ -32,6 +32,11 @@ Example:
 }
 
 ```
+## Tools
+JSONLint: https://jsonlint.com/  
+Schema Validator: https://www.jsonschemavalidator.net/  
+JSON-LD Playground: https://json-ld.org/playground/  
+JQ: https://play.jqlang.org/ 
 
 ## String
 unicode (utf-8)

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop xmlns="http://www.example.com/first" xmlns:second="http://www.example.com/second">
+    <webpage>
+        <title xml:lang="en">My shop</title>
+        <title xml:lang="cs">Muj obchod</title>
+        <url>www.myshop.example.com</url>
+    </webpage>
+    <items>
+        <item category="notebook">
+            <name>Lenovo Idepad 14EL</name>
+            <price currency="CZK">12990</price>
+        </item>
+        <second:item category="smartphone">
+            <name>Samsung Galaxy S21</name>
+            <price currency="CZK">19990</price>
+        </second:item>
+    </items>
+</shop>

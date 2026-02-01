@@ -1,0 +1,18 @@
+{
+    "@context": {
+        "publishedTime": {
+            "@id": "http://example.org/vocabulary/publishTime",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "title": {
+            "@id": "http://purl.org/dc/terms/title",
+            "@container": "@language"
+        }
+    },
+    "@type": "http://example.org/vocabulary/PublicContract",
+    "@id": "https://smlouvy.gov.cz/smlouva/1153037",
+    "publishedTime": "2017-02-01T00:13:13+01:00",
+    "title": {
+        "cs": "Pomocné práce v závodní jídelně"
+    }
+}

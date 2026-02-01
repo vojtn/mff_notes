@@ -34,8 +34,8 @@ Best regards,
 
 
 # XML (Extensible Markup Language)
-- text-based hierarchical format - it needs a root
-Differences between versions deal mainly with Unicode
+- text-based hierarchical format - it needs a root  
+Differences between versions deal mainly with Unicode  
 1.0 used widely, 1.1, unfortunately, not so much
 
 ## Versions
@@ -164,9 +164,13 @@ https://www.w3schools.com/xml/xml_namespaces.asp
 
 
 ### QName
+A compact way to name an element or attribute by combining a namespace prefix with a local name.  
+Associates the URI of an XML namespace with the local name of an element, attribute, or identifier in that namespace. To make this association, the QName assigns the local name a prefix that corresponds to its namespace  
+
+Namespace URI + local part + prefix
+
 ```
 <h:table xmlns:h="http://www.w3.org/TR/html4/">
-
 ```
 ### Default
 

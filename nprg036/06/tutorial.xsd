@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="contracts">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="1">
+                <xs:element name="contract">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="uri" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="publishTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="content" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

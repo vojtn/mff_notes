@@ -2,14 +2,13 @@
 | Overview |
 | - |
 | [Intro](./01/Intro.md) |
-|  |
 
 
 | Graph data formats |
 | - | 
 | [2. RDF](./02/RDF.md) |
 | [2. RDF Schema](./02/RDFS.md) |  
-| [2. Linked data](./02/LinkedData.md.md) |  
+| [2. Linked data](./02/LinkedData.md) |  
 | [3. SPARQL](./03/SPARQL.md) |
 | [4. Vocabularies](./04/Vocabs.md)|
 | [4. Wikidata](./04/Wikidata.md) |

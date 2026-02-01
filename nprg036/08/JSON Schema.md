@@ -1,12 +1,12 @@
 # JSON Schema
 https://json-schema.org/
-- Proposed IETF/ECMA standard
+- Proposed IETF/ECMA standard  
 “JSON Schema is a vocabulary that allows you to annotate
-Roles:
+Roles:  
 - annotation - describing the structure for people (title, description)
-- validation - constraining the structure for machines (type)
-First proposal: 2007
-Still under development, currently 2020-12
+- validation - constraining the structure for machines (type)  
+First proposal: 2007  
+Still under development, currently 2020-12  
 
 ```
 {
@@ -129,18 +129,17 @@ https://www.jsonschemavalidator.net/
 https://tryjsonschematypes.appspot.com/#validate
 
 ## JSON-LD
+JSON for Linked Data  
 Goal of JSON-LD is to satisfy both JSON and RDF oriented developers.
 
-JSON-LD @context
-
-Makes JSON interpretable as RDF model through mapping specified by @keywords
-
+JSON-LD @context -> Makes JSON interpretable as an RDF data model by mapping terms and keywords to IRIs.  
+![alt text](jsonld.png)
 RDF oriented developers can load a JSON-LD file just as any other RDF serialization
-JSON oriented developers can ignore @context and work with the rest of the file as with a regular JSON file
+JSON oriented developers can ignore @context and work with the rest of the file as with a regular JSON file  
 
 JSON-LD 1.1 - W3C Recommendation
 - 16 July 2020
-
+- playground: https://json-ld.org/playground/
 
 ```
 {
@@ -162,4 +161,136 @@ JSON-LD 1.1 - W3C Recommendation
 }
 
 
+```
+
+### Keywords
+- @context
+- @id - subject identifier (IRI)
+- @language
+- @type - type/class identifier
+- @vocab - default vocabulary
+- @base - base IRI 
+- @reverse - reverse direction like parent-children relationship
+- @graph - grouping of nodes (can represent named graphs when combined with @id)
+
+### ID
+Purpose of @id is to assign an IRI to a node (RDF subject)  
+- subject identifier (IRI)
+
+```
+{
+  "@context":
+  {
+    ...
+    "name": "http://schema.org/name"
+  },
+  "@id": "http://me.markus-lanthaler.com/",
+  "name": "Markus Lanthaler",
+  ...
+}
+
+```
+
+### Type
+@type - specifies class IRI
+It can be an array - specifying multiple types/classes
+```
+{
+...
+  "@id": "http://example.org/places#BrewEats",
+  "@type": "http://schema.org/Restaurant",
+...
+}
+
+{
+...
+  "@id": "http://example.org/places#BrewEats",
+  "@type": [ "http://schema.org/Restaurant", "http://schema.org/Brewery" ],
+...
+}
+```
+
+### Keyword aliasing
+For hardcore JSON developers, who do not want to see an “@keywords” in “their normal JSON” file, keywords can also be aliased - renamed - in the @context.
+
+```
+{
+  "@context":
+  {
+     "url": "@id",
+     "type": "@type",
+     "Person": "http://xmlns.com/foaf/0.1/Person",
+     "name": "http://xmlns.com/foaf/0.1/name"
+  },
+  "url": "http://example.com/about#gregg",
+  "type": "Person",
+  "name": "Gregg Kellogg"
+}
+```
+
+### Multiple values
+- JSON Array has ordering defined.
+- However, without further specification, this is translated into regular multiple RDF values, i.e. unordered
+- If we want to preserve the ordering, we need to use the “@list” keyword
+
+```
+{
+...
+  "@id": "http://example.org/people#joebob",
+  "nick": [ "joe", "bob", "JB" ],
+...
+}
+{
+...
+  "@id": "http://example.org/people#joebob",
+  "nick":
+  {
+    "@list": [ "joe", "bob", "jaybee" ]
+  },
+...
+}
+```
+
+### 3 Ways how to add context
+
+#### Regular
+Using @context keyword and section before normal JSON part
+```
+
+
+```
+
+
+
+#### External
+For hardcore JSON developers, who do not want to see an “@keywords” in “their normal JSON” file, keywords can also be aliased - renamed - in the @context.
+
+```
+{
+  "@context": "https://example.org/context.jsonld",
+  "url": "http://example.com/about#gregg",
+  "type": "Person",
+  "name": "Gregg Kellogg"
+}
+```
+
+#### Using HTTP header
+
+```
+GET /ordinary-json-document.json HTTP/1.1
+Host: example.com
+Accept: application/ld+json,application/json,*/*;q=0.1
+
+====================================
+
+HTTP/1.1 200 OK
+...
+Content-Type: application/json
+Link: <http://json-ld.org/contexts/person.jsonld>; rel="http://www.w3.org/ns/json-ld#context"; type="application/ld+json"
+
+{
+  "name": "Markus Lanthaler",
+  "homepage": "http://www.markus-lanthaler.com/",
+  "image": "http://twitter.com/account/profile_image/markuslanthaler"
+}
 ```

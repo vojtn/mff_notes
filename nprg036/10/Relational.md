@@ -235,16 +235,97 @@ A primer and a set of 4 W3C Recommendations (2015)
 - Generating JSON from Tabular Data on the Web
 - Generating RDF from Tabular Data on the Web
 
-Principle: Annotation of CSV tables using an additional JSON-LD descriptor.
-Use cases: Annotation, Validation, Transformation to different formats
+Principle: Annotation of CSV tables using an additional JSON-LD descriptor.  
+Use cases: Annotation, Validation, Transformation to different formats  
 
-
-Annotated tabular data model
-
+### Annotated tabular data model
+main entities
+- table group
+- table
+- row
+- column
+- cell  
+Properties
+- name
+- titles
+- schema
+- ...
 
 ### JSON-LD Descriptor
+Top-level properties within JSON-LD @context
+@base - base URL (for metadata, not data)
+@language - default language
+
+```
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en",
+            "@base": "https://example.org/"
+        }
+    ]
+}
+```
+
+#### Table group
+Table group with two tables  
+- tables is a required property for table group
+
+```
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@type": "TableGroup",
+    "@id": "https://example.org/tableGroup",
+    "tables": [
+        {
+            "url": "https://example.org/table1.csv"
+        },
+        {
+            "url": "https://example.org/table2.csv"
+        }
+    ]
+}
+
+```
+
+#### Table
+url is a required property for Table
+the rest are annotations using common properties
+```
+Standalone annotated table, i.e. not within table group
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@type": "Table",
+    "@id": "https://example.org/table1",
+    "url": "https://example.org/table1.csv",
+    "dc:title": "Airports",
+    "dcat:keyword": [
+        "airport",
+        "name",
+        "airplane"
+    ],
+    "dc:modified": {
+        "@value": "2010-12-31",
+        "@type": "xsd:date"
+    }
+}
+```
 
 #### Table schema
+- describes columns, rows and cells
+
+
+#### Cell value datatypes
+Added aliases:
+- any ~ xsd:anyAtomicType
+- binary ~ xsd:base64Binary
+- datetime ~ xsd:dateTime
+- number ~ xsd:double
+
+
+Added datatypes: xml, html, json
+
 
 
 #### Default values

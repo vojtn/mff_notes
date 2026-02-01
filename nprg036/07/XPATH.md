@@ -8,6 +8,8 @@
 - XML Path Language (XPath) 3.1
     - W3C Recommendation 2017
 
+tool: http://xpather.com/
+
 ## Example
 
 ```
@@ -45,8 +47,8 @@ XQuery and XPath Data Model 3.1
 #### Absolute path 
 /step1/.../stepN
 
-#### Relatice path
-title[@xml:lang="en"]/text()
+#### Relative path
+title[@xml:lang="en"]/text()  
 
 step1/.../stepN
 Needs a starting point
@@ -60,6 +62,14 @@ text()
 
 #### Attribute
 @attribute ... /catalog/datasets/dataset/title/@xml:lang 
+
+```
+//price/attribute::currency
+```
+=
+```
+//price/@currency
+```
 
 #### Predicates
 /catalog/datasets/dataset/title[@xml:lang="en"]/text()
@@ -78,9 +88,22 @@ text()
 - following-sibling
 - following
 - descendant
+![Axes](image.png)
+
+```
+/catalog/title/preceding-sibling::title/text()
+//contractingAuthority/parent::node()
+```
 
 ## Document order
-according to the position of start tags of elements.
+The order in which nodes appear in the XML document when read from top to bottom, left to right.
+
+1. Start at the root node
+2. Visit each node before its children
+3. Visit children from first to last, in the order they appear
+4. Attributes and namespaces are not part of document order
+
+-> preorder traversal of XML tree
 
 ## XPath 2.0 features
 - result is a sequence (ordered)

@@ -1,15 +1,16 @@
 # Common RDF vocabularies
-both machine and human readable documents
-describes what IRI means and what are defined
+both machine and human readable documents  
+describes what IRI means and what are defined  
 Catalog of vocabularies used on the Web of Data
 -> Basic rule - vocabulary reuse
 
 RDF Vocabulary = collection of classes and properties, their IRIs and their definitions
 
 # Dublin core (dcterms)
-Standardization of naming organization.
-Otherwise people would call same things differently like name/title/label 
+Standardization of naming organization.  
+Otherwise people would call same things differently like name/title/label  
 Origin - librarians community for standardization of books properties (1995: OCLC/NCSA Metadata Workshop)
+
 ## Properties
 - contributor
 - coverage
@@ -58,7 +59,8 @@ ex:catalof dcterms:decription "my first testing catalog"
 ```
 
 # SKOS (Simple Knowledge Organization System)
-For codelists and taxonomies e.g. grades in students information systems.
+For codelists and taxonomies   
+e.g. grades in students information systems.
 
 - W3C recommendation
 - August 2009
@@ -66,7 +68,7 @@ For codelists and taxonomies e.g. grades in students information systems.
 
 
 ## skos:Concept
-Represent idean notion or unit of thought
+Represent idea, notion or unit of thought
 
 Sights and landmark from tripadvisor
 ```
@@ -108,6 +110,7 @@ We need human readable label to the resources and object
 ### skos::altLabel
 - not prefered
 - multiple per language
+- cannot be the same as prefLabel
 
 ### skos:hiddenLabel
 - usage for common misspelings
@@ -154,7 +157,9 @@ We need human readable label to the resources and object
         "America"@en .
 ```
 
-## skos:semanticRrelation
+## skos:semanticRelation
+Semantic relations between concepts within the same concept scheme.
+
 - skos:related
 - skos:broaderTransitive
     - skos:broader
@@ -182,17 +187,35 @@ skos:memberList
 ```
 
 ## Mappings 
-To specify mapping/alignment between schemes.
+To specify mapping/alignment between different concept schemes.
 
 skos:mappingRelation
 
-1. skos:closeMatch
-    - is not transitive
-2. skos:exactMatch (transitive) - means that a concept from another coneptScheme means exactly the same.
-2. skos:relatedMatch
-3. skos:broadMatch
-4. skos:narrowMatch
-    - means that a concept from another coneptScheme means exactly the same. This is transitive.
+## skos:exactMatch 
+- means that a concept from another conceptScheme means exactly the same
+- concepts can be used interchangeably
+- transitive (A exactMatch B . and B exactMatch C . -> A exactMatch C .)
+
+## skos:closeMatch
+- is not transitive
+- similar concepts, but not fully interchangeable (almost same)
+
+## skos:broadMatch
+- The external concept is broader than the local one
+-> A is more specific than B
+```
+ex:HeartAttack skos:broadMatch ex:CardiovascularDisease .
+```
+
+## skos:narrowMatch
+- reverse of broadMatch
+-> B is more specific than A
+```
+ex:Vehicle skos:narrowMatch ex:ElectricCar .
+```
+
+## skos:relatedMatch
+- weakest association
 
 ```
 <https://data.mvcr.gov.cz/zdroj/číselníky/pohlaví/položky/ženské> a skos:Concept;
@@ -233,7 +256,7 @@ haircut
 
 ## gr:Offering
 To transfer some rights (ownership, usage, license) on the object or
-To provide the service for a certain compensation (money)
+To provide the service for a certain compensation (money)  
 Made by the agent and related to the object or service
 
 ## gr:Location

@@ -67,6 +67,7 @@ metaformats = CSV, XML, JSON = hosts formats for use-case specific format
 
 JSON
 - GeoJSON
+
 CSV
 - GTFS
 
@@ -115,8 +116,8 @@ Says whether the data is *easily processed* by appropriate applications
 - Text is encoded into 1s and 0s using character encoding
 
 ##### Character encoding
-###### ASCI
 Character encoding - representation of characters as binary sequences (numbers)
+###### ASCI
 US-ASCII using 7 bits to represent 1 character
 
 ###### New line representation
@@ -202,8 +203,7 @@ Standards organization
 
 ### MIME-type
 Multipurpose Internet Mail Extensions (MIME) type
-Managed by
-Internet Assigned Numbers Authority (IANA)
+Managed by Internet Assigned Numbers Authority (IANA)
 Examples:
 - text/html
 - text/xml
