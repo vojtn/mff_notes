@@ -467,4 +467,22 @@ Primary usecase:
 
 
 # FOAF (Friend of a friend)
-TODO: Bonus
+linking people and information
+
+## Person
+The Person class represents people. Something is a Person if it is a person.
+```
+foaf:Person
+```
+
+## name
+A name for some thing.
+```
+foaf:name
+```
+
+## title
+Title (Mr, Mrs, Ms, Dr. etc) 
+```
+foaf:Title
+```

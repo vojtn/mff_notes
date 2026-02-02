@@ -87,6 +87,25 @@ Sequence - ordering matters - should be interpreted by applications working with
 #### rdf:Alt
 the items are alternatives - only one should be chosen (e.g. by the user working with an application working with the data).
 
+
+### Relations
+
+Relations => Choose direction, then RDF property with source class as domain, target class as range.
+![Example](relation.png)
+```
+ex:Page a rdfs:Class ;
+        rdfs:label "Page"@en ;
+        rdfs:comment "A web page"@en .
+ex:number a rdf:Property ;
+        rdfs:label "Employee number"@en ;
+        rdfs:domain ex:Employee ;
+        rdfs:range xsd:integer .
+ex:creator a rdf:Property ;
+        rdfs:label "Creator"@en ;
+        rdfs:domain ex:Page ;
+        rdfs:range ex:Employee .
+```
+
 ## Open World Assumption (OWA)
 Assumption that the truth value of a statement may be true irrespective of whether or not it is known to be true
 

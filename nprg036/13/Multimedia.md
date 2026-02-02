@@ -94,17 +94,20 @@ Color model - has to be mapped to specific color space
 - Adobe RGB - mapped to CMYK colors, printers
 
 ##### Gamut
-All colors achiavable by a display device
-
-Predefined 
+All colors achiavable by a display device  
+Predefined  
+Devices with a larger gamut can represent more colors
 
 ##### Bit depth
 How many bits are to represent one pixel
 - 24bits nowadays used the most
 
 ##### Transparency
-RGBA
-A = aplha chnanel
+RGBA  
+A = aplha chnanel  
+adds transparency control through the alpha channel   
+Each RGB channel ranges from 0 to 255  
+alpha ranges from 0 (completely transparent) to 1 (completely opaque)
 
 ##### Dithering
 Technique of achieving color combinations from available primary colors
@@ -122,7 +125,7 @@ Fast switching between neighboring colors of a single pixel in time
 ### Lossless Compression
 compression good for images with large areas of same color
 - screenshots
-- drawings (if vector representation not possible)
+- drawings (if vector representation not possible)  
 Formats:
 - PNG (historical)
 - WebP lossless
@@ -148,8 +151,8 @@ Split into quadrants, until the blocks have the same color
 - doesnt require frequency analysis
 - when a reapated value is found, it is replaced with reference to its first occurence
 
-Raster formats:
-#### GIF (Graphics Interchange Format) 
+#### Raster formats:
+##### GIF (Graphics Interchange Format) 
 CompuServe, 1987
 - 8 bits per pixel
     - palette of 256 colors
@@ -159,7 +162,7 @@ CompuServe, 1987
 Media type: image/gif
 File extension: .gif
 
-#### PNG (Portable Network Graphics)
+##### PNG (Portable Network Graphics)
 RFC 2083 1997, ISO/IEC 15948:2004
 - replacement for GIF
 - 8bpc
@@ -172,7 +175,7 @@ Media type: image/png
 File extension: .png
 
 ### Lossy Compression
-good for photographs
+good for photographs  
 Formats:
 - JPEG (historical)
 - WebP
@@ -195,7 +198,7 @@ Humans more sensitive to lower frequencies, less sensitive to higher frequencies
 Variable amount of discarded frequencies ~ compression level
 
 #### Chroma subsampling
- reducing resolution of the chroma components
+reducing resolution of the chroma components
 human eye more sensitive to luma changes than to chroma changes
 
 #### YCbCr
@@ -205,8 +208,8 @@ Y′ - luma, luminance ~ brightness
 Cb - chroma, chrominance, blue component
 Cr - chroma, chrominance, red component
 
-Raster formats: 
-#### JPEG (Joint Photographic Experts group)
+#### Raster formats: 
+##### JPEG (Joint Photographic Experts group)
 1992, ISO/IEC 10918-1:1994
 - Most common format for photographic images on the Web
 - Support for progressive compression
@@ -289,9 +292,9 @@ ITU-T 2020, v3 2023
 - Licensed
 
 
-## Raster Graphics fomrats based on video foramts
+## Raster Graphics formats based on video formats
 
-#### WebP
+### WebP
 - Google 2010
 - successor to GIF, PNG and JPEG
 - open format
@@ -302,7 +305,7 @@ ITU-T 2020, v3 2023
 Media type: image/webp
 File extension: .webp
 
-#### HEIF
+### HEIF
 High Efficiency Image File Format (HEIF)
 container, MPEG 2015
 *HEIC* based on H.265 HEVC I-frames
@@ -401,16 +404,16 @@ Contains metadata for synchronized playing of multiple data types
 
 ### Matroska
 Matroska 2002
-- open format
+- open format 
 file extension: .mkv
 
 ### WebM
 Google 2010
 - subset of Matroska
-- limits usable formats to the open ones
+- limits usable formats to the open ones  
 
-Video: VP8, VP9, AV1
-Audio: Vorbis, Opus
+Video: VP8, VP9, AV1  
+Audio: Vorbis, Opus  
 
 file extension: .webm
 
@@ -423,7 +426,7 @@ printer programming language
 - arguments first, function last
 - contains global state, instructions on one page may affect all the following pages
 
-media type: application/postscript
+media type: application/postscript  
 File extension: .ps
 
 ```
@@ -439,7 +442,8 @@ showpage             % print all on the page
 ```
 
 ### Encapuslated PostScript (EPS)
-PostScript + encapsulated bitmap preview
+PostScript + encapsulated bitmap preview  
+- developed by Adobe - 1987
 
 ### Portable Document Format (PDF)
 - Adobe Inc. 1993

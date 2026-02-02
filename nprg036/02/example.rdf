@@ -1,0 +1,11 @@
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+<ex:mff> a foaf:Organization ;
+    foaf:name "Faculty of Mathematics and Physics"@en ;
+    foaf:homepage "https://www.mff.cuni.cz"^^xsd::anyURI .
+
+<ex:me> a foaf:person;
+    foaf:name "vojtn";
+    foaf:member ex:mff .

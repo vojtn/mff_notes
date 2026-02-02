@@ -42,11 +42,10 @@ Validation keywords for numeric instances
 
 
 ## Arrays
-
-Validation keywords for arrays - list validation
-items, maxItems, minItems
-contains, maxContains, minContains
-uniqueItems
+Validation keywords for arrays - list validation  
+items, maxItems, minItems  
+contains, maxContains, minContains  
+uniqueItems  
 
 
 ## String contraints 
@@ -125,7 +124,7 @@ Schemas can be combined:
 ```
 
 ### Validator
-https://www.jsonschemavalidator.net/
+https://www.jsonschemavalidator.net/  
 https://tryjsonschematypes.appspot.com/#validate
 
 ## JSON-LD
@@ -256,7 +255,23 @@ For hardcore JSON developers, who do not want to see an “@keywords” in “th
 #### Regular
 Using @context keyword and section before normal JSON part
 ```
-
+{
+  "@context":
+  {
+    "name": "http://schema.org/name",
+    "image": {
+      "@id": "http://schema.org/image",
+      "@type": "@id"
+    },
+    "homepage": {
+      "@id": "http://schema.org/url",
+      "@type": "@id"
+    }
+  },
+    "name": "Manu Sporny",
+    "homepage": "http://manu.sporny.org/",
+    "image": "http://manu.sporny.org/images/manu.png"
+}
 
 ```
 
@@ -275,6 +290,7 @@ For hardcore JSON developers, who do not want to see an “@keywords” in “th
 ```
 
 #### Using HTTP header
+And for the most hardcore JSON developers (or if it is simply impossible to add the “@context” key into the JSON file) the JSON @context can be added completely externally, using HTTP headers while serving the plain JSON content.
 
 ```
 GET /ordinary-json-document.json HTTP/1.1
@@ -294,3 +310,6 @@ Link: <http://json-ld.org/contexts/person.jsonld>; rel="http://www.w3.org/ns/jso
   "image": "http://twitter.com/account/profile_image/markuslanthaler"
 }
 ```
+
+### Usage 
+Amazon Alexa

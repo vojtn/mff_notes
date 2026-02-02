@@ -29,6 +29,12 @@ Object (O) = <http://example.com/staff/8574>
 With meaning: 
 The example page (identified by http://example.com/index.html) was created by (http://purl.org/dc/terms/creator) employee number 8574 (identified by http://example.com/staff/8574).
 
+## Tools
+Validator: http://ttl.summerofcode.be/  
+RDF playground: https://rdfplayground.dcc.uchile.cl/  
+
+
+
 ## Serialization
 RDF serialization is a representation of the RDF data model in a (text) file
 7 Standardized for RDF 1.1:
@@ -44,11 +50,13 @@ RDF serialization is a representation of the RDF data model in a (text) file
 A resource is anything identified by an IRI.
 
 ## Prefix
+```
 <http://purl.org/dc/terms/creator>
 =
 @prefix dcterms: <http://purl.org/dc/terms/> .
-dcterms:creator
 
+dcterms:creator
+```
 ## Data model
 RDF data model is a set of triples -> no order 
 

@@ -1,0 +1,24 @@
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+ex:Page a rdfs:Class.
+ex:Person a rdfs:Class.
+ex:Employee a rdfs:Class.
+
+ex:Employee rdfs:subClassOf ex:Person .
+
+
+ex:Page rdfs:label "Page"@en ;
+    rdfs:comment :"A web page"@en .
+
+ex:page ex:creator ex:employee . 
+
+ex:number a rdf:Property ;
+    rdfs:label "Employee number"@en ;
+    rdfs:domain ex:Employee ;
+    rdfs:range xds:integer .
+
+ex:creator a rdf:Property ;
+        rdfs:label "Creator"@en ;
+        rdfs:domain ex:Page ;
+        rdfs:range ex:Employee .

@@ -4,11 +4,11 @@
 - easy to read and write by humans
 - easy to parse and generate by machines
 - used as serialization in 100+ media types
-Media type: application/json
-File extension: .json
-Specific formats: …/…+json
-e.g. application/activity+json
-
+Media type: application/json  
+File extension: .json  
+Specific formats: …/…+json  
+e.g. application/activity+json  
+ 
 Example:
 ```
 {
@@ -147,6 +147,7 @@ GitHub: https://api.github.com/repos/stedolan/jq/commits?per_page=5
 ### Data standards
 Standard for Czech Touristic Points of Interest: https://ofn.gov.cz/turistické-cíle/2020-07-01/
 
+
 ### jq
 - coommand-line JSON query tool
 supports filters
@@ -159,7 +160,7 @@ jq '.[0] | {message: .commit.message, name: .commit.committer.name}'
 ```
 
 ### Document stores
-Apache CouchDB - allows read, update and delete of JSON documents
+Apache CouchDB - allows read, update and delete of JSON documents (document database)
 
 ### Indices
 Apache Solr - allows searching in JSON fields
@@ -169,9 +170,9 @@ https://jsonlines.org/
 - each line is a valid JSON Value
 - alternative to a directory of individual JSON files
 - alternative to CSV files
-File extension: .jsonl
-Stream compression recommended
-.jsonl.gz .jsonl.bz2
+File extension: .jsonl  
+Stream compression recommended  
+.jsonl.gz .jsonl.bz2  
 - Mainly for processing record by record
 
 
@@ -183,8 +184,7 @@ Stream compression recommended
 ```
 
 ### XSLT 3.0 json-to-xml()
-The XML representation according to the XML schema can be also used for reverse transformation
-
+The XML representation according to the XML schema can be also used for reverse transformation  
 The XML array for London is omitted.
 
 fn:json-to-xml($json-text as xs:string) as document-node()
@@ -200,4 +200,8 @@ RFC 6901
 /uptodate
 /cities/London
 /cities/Brussels/0/to
+```
+
+```
+https://example.org/my.json#/cities/Brussels/0/to
 ```

@@ -383,3 +383,5 @@ URI template for RDF statement object
 
 ### Alternative
 frictionlessdata.io - Table Schema
+
+#### Anoated tabular data

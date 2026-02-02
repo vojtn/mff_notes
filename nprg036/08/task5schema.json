@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://example.org/public-contracts-schema.json",
-     "type": "array",
+    "type": "array",
     "title": "Public contracts",
     "minItems": 1,
     "items": {
