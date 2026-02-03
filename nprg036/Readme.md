@@ -1,7 +1,7 @@
 
 | Overview |
 | - |
-| [Intro](./01/Intro.md) |
+| [1. Intro](./01/Intro.md) |
 
 
 | Graph data formats |

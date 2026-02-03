@@ -493,3 +493,24 @@ The authors of the paper I read \cite{myPaper} say that BibTeX is cool.
   doi       = {10.3233/SW-180316}
 }
 ```
+
+# Usage of text
+
+## Text search
+- exact match
+- wildcard search
+- regular expressions
+
+## Inverted index
+- search in database of documents
+
+## Text comparison
+- diff
+
+## Named entity recognition
+DBpedia Spotlight
+
+Results of NER can be used for better search, e.g.
+“Texts where cities are mentions” - returns texts where Berlin or Potsdam is mentioned
+
+- conversion of regular text to structured data -> detection of keywords (entit)
