@@ -205,8 +205,8 @@ SQLite database file
 -cant represent anything else
 
 ### GeoSPARQL
-+Ontology\
-+query language supporting spatial operations, Geometry representation in both GML and WKT\
++Ontology  
++query language supporting spatial operations, Geometry representation in both GML and WKT  
 -may be too complicated for beginners, seems overpowered for simple representation
 
 ### GeoJSON-LD

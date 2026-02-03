@@ -32,8 +32,8 @@ They can exist on their own, independently of any class.
 
 
 ```
-ex:driver          rdf:type             rdf:Property .
-ex:primaryDriver   rdf:type             rdf:Property .
+ex:driver          a             rdf:Property .
+ex:primaryDriver   a             rdf:Property .
 ex:primaryDriver   rdfs:subPropertyOf   ex:driver .
 
 ```

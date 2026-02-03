@@ -2,8 +2,9 @@
 - connected entities -> more important that the entities themselves (if sql query with multiple 5+ joins)
 - social networks
 - network switched
-- management hierarchies
-- family trees
+- selfreferencing
+  - management hierarchies
+  - family trees
 - discovering many different paths
     1. public transport
     2. good delivery
@@ -209,27 +210,59 @@ as of 11/2025 - not yet implemented sufficiently
 RDF statement itself does not have an identifier - we cannot say anything about it.
 -> Reification
 
+## RDF model - reification
+Statement will become a resource.
+- Assign IRI to the statement itself
+- make it a blank node (e.g. _:triple1)
+
+original:
+```
+my:index.html my:createdBy "Jakub Klímek" .
+
+```
+reified:
+
+```
+_:triple1 a rdf:Statement .
+_:triple1 rdf:subject   my:index.html   .
+_:triple1 rdf:predicate my:createdBy    .
+_:triple1 rdf:object    "Jakub Klímek"  .
+_:triple1 dcterms:source "https://x.y.z"^^xsd:anyURI .
+_:triple1 dcterms:created "2020-04-23"^^xsd:date .
+```
+
+LPG:
+
+```
+(w:PAGE {name: "my:indext.html"})-[:CREATED_BY {cameFrom: "https://x.y.z", scrapedOn: "2020-04-23"}]->(p:PERSON {name: "Jakub Klimek"})
+```
+
+
 ## RDF-star
 part of RDF 1.2 draft  
 Allows RDF statements to appear as subjects and objects of other RDF statements.  
-The triple in the subject or object position is enclosed in << >> , called “quoted triple”.  
+- (It allows "properties on edges" just like LPG)
+
+### Quoted triple
+The triple in the subject or object position is enclosed in << >>
+- for claims
+
 Quoted triples not necessarily asserted triples, i.e. triples forming the RDF graph.
 Annotation syntax for both asserted and quoted triples.
+```
+<< my:index.html my:createdBy "Jakub Klímek" >> 
+     dcterms:source "https://x.y.z"^^xsd:anyURI ;
+     dcterms:created "2020-04-23"^^xsd:date .
+```
 
+### Anotation syntax
 
 ```
-#Bob states: there is someone named Alice
-#There is someone named Alice, stated Bob.
-<< _:a :name "Alice" >> :statedBy :bob.
+my:index.html my:createdBy "Jakub Klímek" {|
+     dcterms:source "https://x.y.z"^^xsd:anyURI ;
+     dcterms:created "2020-04-23"^^xsd:date .
+|} .
 
-#Employee22 claims that employee38's job title is Assistant designer
-:employee38 :familyName "Smith" .
-:employee22 :claims 
-<< :employee38 :jobTitle "Assistant Designer" >> .
-
-#Annotation syntax
-:employee38 :jobTitle "Assistant Designer" 
-                {| :claimedBy :employee22 |} .
 ```
  
 ### Usage 

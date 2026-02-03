@@ -153,6 +153,10 @@ xsd:dateTime
 ✔ YYYY-MM-DDTHH:MM:SS
 i.e xsd:date + "T" + xsd:time
 
+
+-> rfc4180
+
+
 #### Header
 CSVs with missing headers are not recommended
 without header, the data is even less interpretable
@@ -250,6 +254,13 @@ Properties
 - titles
 - schema
 - ...
+
+### "new" Types
+Added aliases:
+- any ~ xsd:anyAtomicType
+- binary ~ xsd:base64Binary
+- datetime ~ xsd:dateTime
+- number ~ xsd:double
 
 ### JSON-LD Descriptor
 Top-level properties within JSON-LD @context

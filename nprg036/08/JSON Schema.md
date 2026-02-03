@@ -42,10 +42,28 @@ Validation keywords for numeric instances
 
 
 ## Arrays
-Validation keywords for arrays - list validation  
-items, maxItems, minItems  
-contains, maxContains, minContains  
-uniqueItems  
+Validation keywords for arrays - list validation    
+- items, maxItems, minItems  
+- contains, maxContains, minContains  
+- uniqueItems  
+
+
+items - items schema must be valid for every item  
+contains - one or more items must be valid, maxContains, minContains
+
+
+```
+{
+  "type": "array",
+  "items": [
+    { "type": "number" },  // First must be number
+    { "type": "number" },  // Second must be number
+    { "type": "string" }   // Third must be string
+  ],
+  "minItems": 3,
+  "additionalItems": false
+}
+```
 
 
 ## String contraints 

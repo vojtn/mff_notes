@@ -194,11 +194,11 @@ Compression comes next ~ quantization.
 
 
 #### Quantization
-Humans more sensitive to lower frequencies, less sensitive to higher frequencies
+Humans more sensitive to lower frequencies, less sensitive to higher frequencies  
 Variable amount of discarded frequencies ~ compression level
 
 #### Chroma subsampling
-reducing resolution of the chroma components
+reducing resolution of the chroma components  
 human eye more sensitive to luma changes than to chroma changes
 
 #### YCbCr
@@ -306,16 +306,16 @@ Media type: image/webp
 File extension: .webp
 
 ### HEIF
-High Efficiency Image File Format (HEIF)
-container, MPEG 2015
-*HEIC* based on H.265 HEVC I-frames
-Media type: image/heif image/heic
-File extension: .heif .heic
-
-*AVIF* - based on AV1 encoding
-Media type: image/avif
-File extension: .avif
-Both about 50% smaller than JPEG
+High Efficiency Image File Format (HEIF)  
+container, MPEG 2015  
+*HEIC* based on H.265 HEVC I-frames  
+Media type: image/heif image/heic  
+File extension: .heif .heic  
+### AVIF
+*AVIF* - based on AV1 encoding  
+Media type: image/avif  
+File extension: .avif  
+Both about 50% smaller than JPEG  
 
 ## Digital audio formats
 
