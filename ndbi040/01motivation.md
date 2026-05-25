@@ -125,13 +125,14 @@ Limitations
 - network reliability
 - network security
 
-Modern Database Systems for Big Data
+Modern Database Systems for Big Data  
 New requirements:
 - distributed by design
 - horizontally scalable
 - fault tolerant
 - flexible schemas
-- high throughput
+- high throughput   
+
 Result - new database families:
 - NoSQL databases
 - Key/value, column, document
