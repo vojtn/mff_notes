@@ -110,7 +110,7 @@ Disadvantages:
 - Can require more roundtrips to the server (follow up queries)
 
 Use when
-- data chenges freuquelnty
+- data changes frequently
 - many to many relationships
 - documents would become too large
 - for shared entities
@@ -124,21 +124,25 @@ Related data in a single document structure
 - Documents can have subdocuments
 - Applications may need to issue less queries
 - Denormalized data models
-- Allow to manipulate related data in a single database operation
+- Allow to manipulate related data in a single database operation  
+
 Provides:
 - Better performance for read operations
-- Ability to retrieve/update related data in a single database operation
+- Ability to retrieve/update related data in a single database operation  
+
 Disadvantages:
 - Documents may significantly grow
-- Only one “view” of the data
+- Only one “view” of the data  
+
 Use when
 - data naturally hierarchial
-- data ussulaly read toghet
-- updates are rare
+- data usually read together
+- updates are rare  
+
 Use cases:
 - orders with items
-- blog posts with commnets
-- user profile wiht adresses
+- blog posts with comments
+- user profile with adresses
 
 
 ### Embedding vs. Referencing Trade-off
@@ -168,7 +172,7 @@ db.orders.deleteOne({...})
 ### Insert
 insertOne() → one network request per document
 ```
-db.inventory. insertOne({
+db.inventory.insertOne({
     type: "misc",
     item: "card",
     qty: 15
@@ -176,7 +180,7 @@ db.inventory. insertOne({
 ```
 insertMany() → batch insert (more efficient)
 ```
-db.inventory. insertMany([
+db.inventory.insertMany([
 { type: "food", item: "apple", qty: 50, price: 0.5 },
 { type: "food", item: "banana", qty: 80, price: 0.3 },
 { type: "book", item: "notebook", qty: 40, price: 5.0
@@ -188,7 +192,7 @@ db.inventory. insertMany([
 ### Update
 
 ```
-db.inventory. updateOne(
+db.inventory.updateOne(
     { item: "card" },
     { $set: { qty: 20 } }
 )
@@ -215,7 +219,7 @@ db.orders.aggregate([
 ])
 ```
 
-Stages
+Stages:
 - match
 - project
 - group
@@ -229,9 +233,7 @@ Retrieves documents using simple queries.
 aggratation
 - tranfrom and analyzing data, multistage processing
 
-
-
-### Indices
+### Indexes
 * Without indexes, MongoDB scans all documents (**COLLSCAN**).
 * With an index, MongoDB searches using a B-tree-like index structure (**IXSCAN**).
 * **Purpose:** Speed up common queries and optimize specific operations.

@@ -3,15 +3,14 @@
 
 
 # Graph Data Management
-Property graph databases, graph stores
+Property graph databases, graph store. 
+- Data are stored as nodes and relationships
+- often flexible schema       
 
-Data are stored as nodes and relationships
-
-- often flexible schema
 typical operations:
 - find a node or neighborhood
-- travese relationship
-- good for highly interconnected data
+- traverse relationship
+- good for highly interconnected data  
 Joins are replaced by traversals
 
 
@@ -24,10 +23,12 @@ Node
 - identifier
 - labels
 - properties
+
 Relationship
 - directed edge between two nodes
 - type
 - properties
+
 Property
 - key-value pair
 
@@ -174,18 +175,22 @@ started and controlled by the application
 Use explicit when several steps must succeed together
 
 
-## Indices
+## Indexes
 - Without index: Database may need to scan many nodes
 - With index: Database can find matching nodes directly
+
 Typical use:
 - find a person by name
 - find all movies from a given year
+
 Index
 - Used to find entry points in the graph
 - Based on property values
+
 Traversal
 - Used to explore connected data
 - Follows relationship
+
 Traversal follows relationships, but an index helps us find the starting node
 
 ```

@@ -95,15 +95,26 @@ Provides:
 - Stream processing
 
 #### Spark application
+**Driver Program**
+- Runs user’s main function
+- Creates SparkSession / SparkContext
+- Builds execution plan
+- Sends tasks to cluster
+**Executors**
+- Run tasks in parallel
+- Store data in memory or disk
+- Return results to driver
+**Cluster Manager**
+- Allocates resources
+- Launches executors
 
-Driver Program
-
-Executors
-
-Spark Session
+**Spark Session**
+- entry point to Spark functionality
+- Creates connection to cluster and initializes execution environment
 
 #### RDD (Resilient Distributed Dataset)
 - basic distributed data structure in Spark
+    - collection of elements partitioned across cluster
     - processed in parallel
 - immutable
 - fault-tolerant
@@ -119,10 +130,10 @@ Features:
 -> main abstraction in modern Spark
 
 ##### Operations
-Trasfromation
-- creates a new databse from an existing one - lazily
+**Transformation**
+- creates a new dataset from an existing one - lazily
 - build execution plan
-- dont run immediately
+- do NOT run immediately
 
 ```
 df.select("name")
@@ -130,7 +141,7 @@ df.filter(df.age > 18)
 df.groupBy("age").count()
 ```
 
-Action
+**Action**
 - trigger execution and return results
 - execute the computation
 - return result to driver
@@ -141,25 +152,66 @@ df.count()
 df.collect()
 ```
 
-##### File formats
-csv
+##### File formats for analytics
+Key idea: Format affects performance
+
+**csv**
 - row based
 - human readable
 - slow for analytics
-Parquet
+
+**Parquet**
 - columnar
 - compressed
 - efficient for aggregation
 
 
-##### Usage
-SQL
+##### Partitioning by Column
+Large datasets are often stored in separate folders/prefixes, according to selected attribute values
+Example:
+- e.g., region=EU/, region=US/, region=APAC/
+why?
+- Queries often filter by region or date
+- Spark can read only relevant parts
+- Less data scanned = faster analytics
+-> Trade-off: too many partitions may create too many small files
 
-DataFrame API
+##### Usage
+Two ways to work with structured data in Spark
+■ Both approaches produce the same execution plan
+
+**SQL:**
+- familiar relational queries
+- joins, aggregations
+- analysts & DB mindset
+
+```sql
+spark.sql(
+    "SELECT name, age "
+    "FROM people "
+    "WHERE age > 18"
+).show()
+```
+
+**DataFrame API:**
+- programmatic pipelines
+- integration with Python
+- complex transformations
+```
+df.filter(df.age > 18) \
+    .select("name", "age") \
+    .show()
+```
+
+---
 
 ## Object Storage
+Needs to scale storage and share by clusters -> from traditonal HDFS to modern solution **Object storage**:
 * Shared persistent storage accessed via a network API
-* Independent scaling and cloud-native architecture
+* Independent scaling 
+* Access via network API
+* cloud-native architecture
+Used by: Spark, analytics systems, machine learning, …
 
 ### Amazon S3 Model
 * Scalable distributed storage layer (Cloud service)

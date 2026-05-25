@@ -66,8 +66,8 @@ Storing multiple copies of the same data across different nodes.
 
 # Types of NoSQL databases
 - Key-value: Redis, riak
-- doument - mnogoDB
-- column Store: cassandra
+- document - mongoDB
+- column: cassandra
 - graph: neo4j
 These systems differ mainly in how data
 is modeled and accessed
@@ -88,7 +88,7 @@ Data is organized into rows and column families (Inspired by Google BigTable).
 * **Examples:** Apache Cassandra, HBase.
 
 ## Document systems
-tore data as self-describing hierarchical structures (JSON, BSON, XML).
+Stores data as self-describing hierarchical structures (JSON, BSON, XML).
 * **Model:** Documents are grouped into collections. They are a natural representation of application objects.
 * **Features:** Flexible schema (fields may differ between documents). Offers rich query capabilities, though complex joins are not typical.
 * **Basic operations:** Insert/delete a document, retrieve documents by query, update document fields.

@@ -17,7 +17,7 @@ Also known as column-family or columnar stores.
 * **User profiles and activity data:** Rows may have different sets of attributes.
 * **Content platforms:** Denormalized data grouped strictly by access patterns.
 
---
+---
 
 # Cassandra
 A distributed wide-column data store originally developed at Facebook (Initial release: 2008, Apache License, written in Java).

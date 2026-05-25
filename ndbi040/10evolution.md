@@ -18,7 +18,6 @@ Systems are designed once, used for years
 
 -> all of that change during system lifetime
 
-
 ## Forces that break the original design
 Application driven
 - new etities

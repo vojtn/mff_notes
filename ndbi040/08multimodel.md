@@ -11,23 +11,23 @@ Modern applications deal with high structural heterogeneity:
 - temporal and spatial data
 - text
 
-
 ## Polyglot Persistence
 Use the right tool for the job
 - Document store → for structured data with differences
 - Graph store → for relations
 - Key/value store → for simple managed structure
+
 However the integration is hard
 
-Pros
+Pros:
 - handles multi-model data
 - helps apps scale
-- rich experience, mature systems -standards
-Cons
+- rich experience, mature systems -standards 
+
+Cons:
 - requires integration expertise
 - developers must learn multiple DBs
 - challenge of cross-model queries and transactions
-
 
 ## Multi-Model Databases
 Designed to support multiple data models (table, XML, JSON, text, RDF) against a single, integrated backend.
@@ -53,7 +53,6 @@ Cons:
 * **Graph:** OrientDB
 * **Key/value:** Riak, Oracle NoSQL DB
 * **Column:** Cassandra, CrateDB, DynamoDB, HPE Vertica
-
 
 ## Multi-Model Database Challenges
 * **Modeling and Representation:** Open data models, schema/model evolution, and choosing between references vs. embedding vs. redundancy.
@@ -96,8 +95,8 @@ RETURN ...
 
 ## Integration Strategies for Multi-Model Data
 * **Multi-model databases:** One single, integrated backend.
-* **Polyglot Persistence:** Multiple stores integrated by the application.
-* **Polystores:** A federated query system sitting on top of multiple data storage technologies used jointly.
+* **Polystores:** Multiple data storage technologies used jointly
+    - Idea: Use the right tool for (each part of) the job -> glued together
 
 ### Polystores Types
 * **Loosely-coupled:** Mediator-wrapper style. Common interface with high autonomy for local stores.

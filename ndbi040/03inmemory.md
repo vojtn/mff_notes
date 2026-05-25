@@ -25,9 +25,11 @@ Data placement determines system behavior:
 * **Benefits:** Faster reads, lower DB load, better scalability.
 
 ## Two Database Dimensions
-* **Storage Model:** * In-memory (RAM) - e.g., Redis
+* **Storage Model:** 
+    * In-memory (RAM) - e.g., Redis
     * Disk-Based (Disk) - e.g., PostgreSQL
-* **Deployment Model:** * Embedded (Runs inside the app) - e.g., SQLite
+* **Deployment Model:** 
+    * Embedded (Runs inside the app) - e.g., SQLite
     * Server-based (Separate database server) - e.g., PostgreSQL
 
 ---
@@ -88,7 +90,7 @@ Most widely deployed database
     - It is accessed through a library
 - Typical environments: mobile apps, web browsers, desktop applications, IoT devices
 
---
+---
 
 # Redis
 Open-source database
