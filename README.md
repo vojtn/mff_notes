@@ -9,3 +9,4 @@ This repo contains a subset of notes from my studies of computer science at Facu
 | [Compiler Principles](/nswi098/README.md) | NSWI098 | cs | e-handwritten |
 | [Propositional and Predicate Logic](/nail062/README.md) | NAIL062 | cs | e-handwritten |
 | [Data Formats](/nprg036/Readme.md) | NPRG036 | en | markdown |
+| [Modern Database Systems](/ndbi040/README.md)| NDBI040| en | markdown |
