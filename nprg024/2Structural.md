@@ -396,5 +396,5 @@ Client
 - Composite
 - Facade
 - Singleton
-- state
-- Strategies
+- State
+- Strategy

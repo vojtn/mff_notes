@@ -4,8 +4,6 @@ Behavioral design patterns are concerned with algorithms and the assignment of r
 ## State
 behavioral design pattern that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
 
-### Motivation
-
 ### About
 - related to the concept of a Finite-State Machine 
 - specific behavior based on the specific state
@@ -50,13 +48,10 @@ Client
 - can have nagative impact on performance
 
 ### Related patterns
-
 - Singleton
 - Flyweight
 - Strategy
- - delegace prace
- - Strategy - objekty independetn on each other
- - State - 
+ - job delegation
 
 ## Memento
 behavioral design pattern that lets you save and restore the previous state of an object without revealing the details of its implementation.
@@ -112,18 +107,12 @@ Alternative implementation
 - dynamic language - PHP, Python, Javascript - cant guarantee taht the state within the memento stays untouched
 
 ### Related patterns
-
 - Command
-
 - Iterator
-
 - Prototype
 
 ## Iterator
 Behavioral design pattern that lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).
-
-
-### Motivation
 
 ### About
 - unified interface to sequential access to collection elemnts
@@ -133,8 +122,6 @@ Behavioral design pattern that lets you traverse elements of a collection withou
     - Next()
     - IsDone()
     - CurrentItem()
-
-### Example
 
 ### Structure
 Iterator 
@@ -172,9 +159,7 @@ Client
 - may be less efficeint for some specialized collection than direct access
 
 ### Related patterns
-
 - Factory method
-- Proxy
 - Composite
 - Memento
 - Visitor
@@ -248,7 +233,6 @@ Client
 ## Interpreter
 Provides way to evaluate language grammar or expression
 
-
 ### About
 - tree structure
 - defines grammar
@@ -279,7 +263,6 @@ Concrete Expression
 - parsers
 - Query languages (SQL)
 - units conversions
-
 
 ### Advantages
 - simple implementation
@@ -389,6 +372,7 @@ Client
 - creates publisher and subscriber
 
 ![](./img/observer.png)
+
 ### Usage
 - GUI event handling
 - real-time dashboards
@@ -565,9 +549,6 @@ Concrete class
 ### Related patterns
 - Factory Method
 - Strategy
-
-
-
 
 
 ## Visitor

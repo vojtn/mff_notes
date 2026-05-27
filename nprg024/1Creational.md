@@ -260,5 +260,5 @@ Singleton
 
 ### Related patterns
 - Abstract Factory
-- builder
+- Builder
 - Facade
