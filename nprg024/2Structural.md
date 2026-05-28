@@ -1,3 +1,6 @@
+| [Overview](./README.md) | [Creational](./1Creational.md) | **Structural** | [Behavioral](./3Behavioral.md) | [Extended](./4Extended.md)| [Relations](./Relations.md)
+| - | - | - | - | - | - |
+
 # Structural design patterns
 Structural design patterns explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient.
 
@@ -341,6 +344,51 @@ Client(4)
 
 ## Decorator
 
+### About
+- dynamic modificaion - adding new properties
+- uses composition
+- recursive structure
+- individual decorators doesnt know about each others
+- also called Wrapper
+
+### Structure
+Component
+- common interface
+
+Concrete Component
+- basic behaviour
+- wrapped object
+
+Base Decorator
+- has reference to Component
+
+Concrete Decorator
+- new funcionality
+
+![](./img/decorator.png)
+
+### Usage
+- notifier
+- IOStream (C#, Java)
+- UI komponenty
+- Gamedev
+
+### Advantages
+- Single Responsibility Principle
+- Open/Closed Principle
+- same modification can be added multiple times
+- dynamic modification (at runtime) 
+
+### Disadvantages
+- hard to remove specific wrapper 
+- order of decorator may have an influence
+
+### Related pattern
+- Adapter
+- Proxy
+- Chain of Responsibilites
+- Composite
+
 ## Flyweight
 Structural design pattern that lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
 
@@ -398,3 +446,6 @@ Client
 - Singleton
 - State
 - Strategy
+
+| [Overview](./README.md) | [Creational](./1Creational.md) | **Structural** | [Behavioral](./3Behavioral.md) | [Extended](./4Extended.md)| [Relations](./Relations.md)
+| - | - | - | - | - | - |

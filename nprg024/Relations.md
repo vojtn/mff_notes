@@ -1,3 +1,5 @@
+| [Overview](./README.md) | [Creational](./1Creational.md) | [Structural](./2Structural.md) | [Behavioral](./3Behavioral.md) | [Extended](./4Extended.md)|
+| - | - | - | - | - |
 
 # Factory Method and Template Method
 Factory Method is a specialization of Template Method. At the same time, a Factory Method may serve as a step in a large Template Method.
@@ -179,3 +181,16 @@ Template Method is based on inheritance: it lets you alter parts of an algorithm
 
 
 # Visitor and Interpreter
+Both patterns are often used together, especially in compilers, parsers, and mathematical expression evaluation.
+
+### How they cooperate:
+* **Interpreter** is used to parse a language/grammar and build an Abstract Syntax Tree (AST).
+* **Visitor** is then used to traverse that AST and execute the actual interpretation or evaluation. 
+
+### Key Characteristics:
+* **Separation of Concerns:** Visitor strictly separates the operational functionality (the algorithm) from the data structure itself.
+* **Capabilities:** Visitor doesn't just read or count values; it can actively transform data, accumulate state, or generate new structures during its traversal.
+
+# 
+| [Overview](./README.md) | [Creational](./1Creational.md) | [Structural](./2Structural.md) | [Behavioral](./3Behavioral.md) | [Extended](./4Extended.md)| **Relations** |
+| - | - | - | - | - | - |
