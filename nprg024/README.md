@@ -1,7 +1,7 @@
 # Design patterns (NPRG024)
 LS 2025/26
 
-## What are desing patterns?
+## What are design patterns?
 Design patterns are typical solutions to commonly occurring problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
 
 ## Notes overview

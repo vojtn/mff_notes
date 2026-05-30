@@ -10,3 +10,4 @@ This repo contains a subset of notes from my studies of computer science at Facu
 | [Propositional and Predicate Logic](/nail062/README.md) | NAIL062 | cs | e-handwritten |
 | [Data Formats](/nprg036/Readme.md) | NPRG036 | en | markdown |
 | [Modern Database Systems](/ndbi040/README.md)| NDBI040| en | markdown |
+| [Design Patterns](/nprg024/README.md) | NPRG024 | en | markdown "
