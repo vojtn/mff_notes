@@ -12,3 +12,4 @@ This repo contains a subset of notes from my studies of computer science at Facu
 | [Modern Database Systems](/ndbi040/README.md)| NDBI040| en | markdown |
 | [Design Patterns](/nprg024/README.md) | NPRG024 | en | markdown |
 | [Automata and Grammars](/ntin071/vypisky.pdf) | cs | e-handwritten (pdf) |
+ 
