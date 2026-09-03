@@ -765,8 +765,6 @@ Pokud aplikace slepě skládá SQL z uživatelského vstupu, může útočník z
 ```
 
 ### Ochrana
-**Primární ochrana: parametrizované dotazy.**
-### Ochrana
 
 **Primární ochrana: parametrizované dotazy.**
 
@@ -786,25 +784,14 @@ WHERE Name = @name
 ```
 
 Další ochrana:
-
 * parametrizované dotazy / prepared statements
 * ORM (např. Entity Framework) při správném použití
 * validace vstupu
 * omezení databázových oprávnění aplikace
 * nevytvářet SQL dotazy prostým konkatenováním stringů
 
-### Pozor
-
+### Pozor!
 Použití `mysqli_real_escape_string()` nebo podobných funkcí není ideální hlavní ochrana.
-
-
-Alternativně
-
-PHP
-```php
-mysqli_real_escape_string()
-```
-
 
 
 ## Cross-side scripting
